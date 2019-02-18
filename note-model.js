@@ -3,7 +3,7 @@
     this.text = text;
   };
 
-  Note.prototype.printText = function(){
+  Note.prototype.addText = function(){
     return this.text;
   };
 
