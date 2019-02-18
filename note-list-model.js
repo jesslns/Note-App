@@ -1,11 +1,11 @@
 (function(exports) {
-  function NoteList(createNote) {
+  function NoteList(makeNote) {
     this.notes = [];
-    this.createnote = createNote;
+    this.makeNote = makeNote;
   };
 
   NoteList.prototype.createNote = function (text) {
-    var note = new this.note.createNote(text);
+    var note = new this.makeNote(text);
     this.notes.push(note);
   }
 
