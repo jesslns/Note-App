@@ -1,7 +1,7 @@
 (function(exports) {
   function NoteList() {
     this.list = [];
-    var note = Note;
+    // var note = Note;
   };
 
   NoteList.prototype.storeNote = function(note){
