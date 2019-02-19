@@ -7,7 +7,7 @@
   NoteList.prototype.createAndStoreNote = function (note) {
     // var note = new this.note(text); // calling new Note
     // var note = text.text
-    this.notes.push(note.text);
+    this.notes.push(note);
   }
   exports.NoteList = NoteList;
 
