@@ -3,18 +3,17 @@ function testNoteList() {
   var note2 = new Note('I can programme fluently');
   var note3 = new Note ('I am having fun');
   var noteList = new NoteList();
-  noteList.createNote(note1)
-  noteList.createNote(note2)
-  noteList.createNote(note3)
-  console.log(noteList.list)
+  noteList.createAndStoreNote(note1)
+  noteList.createAndStoreNote(note2);
+  // noteList(note3).createNote();
+  console.log(noteList)
+  console.log(noteList.notes)
+  console.log(noteList.notes[1])
 
-  assert.isTrue(noteList.list.length === 3);
+  assert.isTrue(noteList.notes[0] === 'I can TDD everything');
+  assert.isFalse(noteList.notes[1] === 'I can TDD everything');
+
 };
-
-// var note1 = 'I can TDD everything';
-// var note2 = 'I can programme fluently'
-//
-// var noteList = new NoteList(note1);
 
 
 testNoteList();
