@@ -1,0 +1,24 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "This is a frontend, single page web app.The requirements can be found [here](https://github.com/makersacademy/course/blob/master/further_javascript/00_challenge_track.md). See user stories and mockups [here](https://github.com/makersacademy/course/blob/master/further_javascript/notes_app_user_stories.md.)",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "node": "^11.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesslns/note-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesslns/note-js/issues"
+  },
+  "homepage": "https://github.com/jesslns/note-js#readme"
+}
