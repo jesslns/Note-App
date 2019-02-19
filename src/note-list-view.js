@@ -5,11 +5,12 @@
   };
 
   NoteListView.prototype.returnHtmlString = function(){
-    
-    var html = this.noteList.map(note => {
-      return "<li><div>" + note.text + "</div></li>"
-    });
-       return "<ul>" + html.join('') + "</ul>"
+    if (this.noteList.length > 0){
+      var html = this.noteList.map(note => {
+        return "<li><div>" + note.text + "</div></li>"
+      })
+      return "<ul>" + html.join('') + "</ul>"
+    } return "no note"
   };
 
   exports.NoteListView = NoteListView;
