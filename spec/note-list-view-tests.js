@@ -1,12 +1,16 @@
 function testNoteListView() {
 
   console.log('html string when there are more than one note')
-  var note1 = new Note('I can TDD everything');
-  var note2 = new Note('I can programme fluently');
+  // var note1 = new Note('I can TDD everything');
+  // var note2 = new Note('I can programme fluently');
+  //
+  // var noteList = new NoteList();
+  // noteList.createAndStoreNote(note1);
+  // noteList.createAndStoreNote(note2);
 
   var noteList = new NoteList();
-  noteList.createAndStoreNote(note1);
-  noteList.createAndStoreNote(note2);
+  noteList.createAndStoreNote('I can TDD everything')
+  noteList.createAndStoreNote('I can programme fluently');
 
   var noteListView = new NoteListView(noteList);
 

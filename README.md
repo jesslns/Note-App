@@ -1,7 +1,7 @@
 # Note App
 
-This is a frontend, single page web app.The requirements can be found [here](https://github.com/makersacademy/course/blob/master/further_javascript/00_challenge_track.md).<br>
-See user stories and mockups [here](https://github.com/makersacademy/course/blob/master/further_javascript/notes_app_user_stories.md.)
+This is a frontend, single page web app within which users can create notes. The requirements can be found [here](https://github.com/makersacademy/course/blob/master/further_javascript/00_challenge_track.md).<br>
+See user stories and mockups [here](https://github.com/makersacademy/course/blob/master/further_javascript/notes_app_user_stories.md).
 
 ## Approach
 

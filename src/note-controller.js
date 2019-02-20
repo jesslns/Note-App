@@ -1,31 +1,33 @@
 (function(exports) {
 
   function NoteController(noteList) {
-    this.noteList = noteList;
-    // document.getElementById("app").innerHTML = 'howdy';
+    noteList.createAndStoreNote("Favourite drink: seltzer") // instantiate new Note
+    this.noteListView = new NoteListView(noteList)
+  };
+
+  // NoteController.prototype.createNote = function(noteText) {
+  //   return new Note(noteText)
+  // };
+  //
+  // NoteController.prototype.createNoteList = function() {
+  //   var noteList = new NoteList(this.note)
+  // };
+
+  NoteController.prototype.renderNotes = function() {
+    var htmlString = this.noteListView.returnHtmlString();
+      console.log(htmlString);
+    document.getElementById("app").innerHTML = htmlString;
     // var content = document.getElementById("app").innerHTML;
     // console.log(content);
   };
 
-  NoteController.prototype.renderNotes = function() {
-
-    document.getElementById("app").innerHTML = 'howdy';
-    var content = document.getElementById("app").innerHTML;
-    console.log(content);
-  };
-
-  exports.NoteController = NoteController
+  exports.NoteController = NoteController;
 
 })(this);
 
 
 window.onload = function() {
-  var note1 = new Note('I can TDD everything');
-  var note2 = new Note('I can programme fluently');
-  var noteList = new NoteList();
-  noteList.createAndStoreNote(note1)
-  noteList.createAndStoreNote(note2);
-
-  var noteController = new NoteController(noteList);
+  let noteList = new NoteList();
+  let noteController = new NoteController(noteList);
   noteController.renderNotes();
-};
+}
