@@ -1,5 +1,3 @@
-'use strict'
-
 (function(exports) {
 
   function NoteListView(noteList) {

@@ -1,7 +1,5 @@
 function testNoteListView() {
 
-  console.log('html string when there are more than one note')
-
   var noteList = new NoteList();
   noteList.createAndStoreNote('I can TDD everything')
   noteList.createAndStoreNote('I can programme fluently');
@@ -10,8 +8,7 @@ function testNoteListView() {
 
   assert.isTrue(noteListView.returnHtmlString() ===
   '<ul><li><div>I can TDD everything</div></li><li><div>I can programme fluently</div></li></ul>');
-
-  console.log('html string when there is no note')
+  console.log('NoteListView return html strings')
 
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
@@ -19,6 +16,7 @@ function testNoteListView() {
   console.log(noteListView.returnHtmlString())
   assert.isTrue(noteListView.returnHtmlString() ===
   "no note")
+  console.log('html string returns no note when there is no note')
 };
 
 

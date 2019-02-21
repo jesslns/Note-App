@@ -6,13 +6,9 @@ function testNoteList() {
   noteList.createAndStoreNote('I can TDD everything')
   noteList.createAndStoreNote('I can programme fluently');
 
-  // console.log(noteList.notes)
-  // console.log(noteList.notes[1])
-
   assert.isTrue(noteList.notes[0].text === 'I can TDD everything');
   assert.isFalse(noteList.notes[1].text === 'I can TDD everything');
-
+  console.log('NoteList can create and store notes')
 };
-
 
 testNoteList();
