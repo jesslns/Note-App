@@ -6,7 +6,6 @@ function testNoteList() {
   noteList.createAndStoreNote('I can TDD everything')
   noteList.createAndStoreNote('I can programme fluently');
 
-  console.log(noteList)
   // console.log(noteList.notes)
   // console.log(noteList.notes[1])
 
