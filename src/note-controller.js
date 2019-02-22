@@ -6,13 +6,13 @@
     // this.noteListView = new NoteListView(this.noteList)
   };
 
-  NoteController.prototype.createNote = function (text){
+  NoteController.prototype.createNote = function(text) {
     this.noteList.createAndStoreNote(text) // instantiate new Note
   };
 
   NoteController.prototype.renderNotes = function() {
     var htmlString = this.noteListView.returnHtmlString();
-    document.getElementById("app").innerHTML = htmlString;
+    return document.getElementById("app").innerHTML = htmlString;
   };
 
   exports.NoteController = NoteController;
@@ -21,11 +21,11 @@
 
 
 // window.onload = function() {
+//   console.log('running contoller')
 //   var noteList = new NoteList();
 //   var noteController = new NoteController(noteList);
 //   console.log(noteController);
-//   noteController.createNote('Favourite drink: seltzer')
-//   noteController.createNote('Favourite food: sushi')
-//   console.log(noteController);
+//   noteController.createNote('Goal One: I can TDD everything')
+//   noteController.createNote('Goal Two: I can programme fluently')
 //   noteController.renderNotes();
-// }
+// };

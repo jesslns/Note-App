@@ -5,7 +5,6 @@ function testNoteListView() {
   noteList.createAndStoreNote('Goal Two: I can programme fluently');
 
   var noteListView = new NoteListView(noteList);
-
   assert.isTrue(noteListView.returnHtmlString() ===
   '<ul><li><div>Goal One: I can TDD </div></li><li><div>Goal Two: I can prog</div></li></ul>');
   console.log('NoteListView return first 20 characters')

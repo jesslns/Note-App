@@ -16,8 +16,8 @@
 
 })(this);
 
-window.onload = function(){
-  var note = new Note('Favourite drink: seltzer');
-  var singleNoteView = new SingleNoteView(note);
-  console.log(singleNoteView.returnHtmlString());
-};
+// window.onload = function(){
+//   var note = new Note('Favourite drink: seltzer');
+//   var singleNoteView = new SingleNoteView(note);
+//   console.log(singleNoteView.returnHtmlString());
+// };

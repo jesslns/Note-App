@@ -10,7 +10,7 @@
         return "<li><div>" + note.text.substring(0,20) + "</div></li>"
       })
       return "<ul>" + html.join('') + "</ul>"
-    } return 
+    } return
   };
 
   exports.NoteListView = NoteListView;
