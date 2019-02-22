@@ -33,6 +33,7 @@ function testNoteController_SingleView() {
   console.log(noteController.noteListView);
   console.log(noteController.getNoteIdFromURL());
   assert.isTrue(noteController.getNoteIdFromURL() === 10);
+  console.log('NoteController can return note id')
   // assert.isTrue(noteController.renderSingleNote() === '<div>Goal One: I can TDD everything</div>')
   // console.log('NoteController can return single note in html string')
 };

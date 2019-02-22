@@ -18,5 +18,4 @@ function testNoteListView() {
   console.log('html string returns undefine when there is no note')
 };
 
-
 testNoteListView();
