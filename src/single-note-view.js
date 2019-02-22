@@ -5,11 +5,7 @@
   };
 
   SingleNoteView.prototype.returnHtmlString = function(){
-      // var html = this.noteList.map(note => {
-      //   return "<li><div>" + note.text + "</div></li>"
-      // })
       return "<div>" + this.note.showText() + "</div>"
-    // }
   };
 
   exports.SingleNoteView = SingleNoteView;

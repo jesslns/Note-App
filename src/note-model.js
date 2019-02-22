@@ -7,7 +7,7 @@
   };
 
   Note.prototype.showText = function(){
-    return this.text;
+    return this.text.substring(0,20);
   };
 
   exports.Note = Note;

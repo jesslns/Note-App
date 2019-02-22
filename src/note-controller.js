@@ -20,12 +20,12 @@
 })(this);
 
 
-// window.onload = function() {
-//   console.log('running contoller')
-//   var noteList = new NoteList();
-//   var noteController = new NoteController(noteList);
-//   console.log(noteController);
-//   noteController.createNote('Goal One: I can TDD everything')
-//   noteController.createNote('Goal Two: I can programme fluently')
-//   noteController.renderNotes();
-// };
+window.onload = function() {
+  console.log('running contoller')
+  var noteList = new NoteList();
+  var noteController = new NoteController(noteList);
+  console.log(noteController);
+  noteController.createNote('Goal One: I can TDD everything')
+  noteController.createNote('Goal Two: I can programme fluently')
+  noteController.renderNotes();
+};
