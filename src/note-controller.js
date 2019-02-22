@@ -1,22 +1,28 @@
 (function(exports) {
 
-  function NoteController(noteList) {
-    this.noteList = noteList
-    this.noteListView = new NoteListView(noteList)
-    // this.noteListView = new NoteListView(this.noteList)
+  function NoteController(noteList,singleNoteView) {
+    this.noteList = noteList;
+    this.noteListView = new NoteListView(noteList);
+    this.singleNoteView = singleNoteView;
   };
 
   NoteController.prototype.createNote = function(text) {
     this.noteList.createAndStoreNote(text) // instantiate new Note
   };
 
-  NoteController.prototype.htmlString = function() {
-    return htmlString = this.noteListView.returnHtmlString();
-    // return document.getElementById("app").innerHTML = htmlString;
+  NoteController.prototype.htmlListString = function() {
+    return this.noteListView.returnHtmlString();
+  };
+
+  NoteController.prototype.getNoteIdFromURL = function () {
+    var html = this.noteListView.returnHtmlString();
+    var firstSplit = html.split("#notes/")[1]
+    return Number(firstSplit.split("\"")[0])
+  // NoteController.prototype.htmlSingleString = function () {
+  //   return this.singleNoteView
   };
 
   NoteController.prototype.renderNotes = function(elementID, htmlString) {
-    // var htmlString = this.noteListView.returnHtmlString();
     return elementID.innerHTML = htmlString;
   };
 
@@ -33,7 +39,6 @@
 //   console.log(noteController);
 //   noteController.createNote('Goal One: I can TDD everything')
 //   noteController.createNote('Goal Two: I can programme fluently')
-//   var htmlString = noteController.htmlString();
+//   var htmlString = noteController.htmlListString();
 //   noteController.renderNotes(elementID,htmlString);
-//   // noteController.renderNotes(notes);
 // };
