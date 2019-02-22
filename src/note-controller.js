@@ -18,9 +18,10 @@
     var html = this.noteListView.returnHtmlString();
     var firstSplit = html.split("#notes/")[1]
     return Number(firstSplit.split("\"")[0])
+  };
+
   // NoteController.prototype.htmlSingleString = function () {
   //   return this.singleNoteView
-  };
 
   NoteController.prototype.renderNotes = function(elementID, htmlString) {
     return elementID.innerHTML = htmlString;
