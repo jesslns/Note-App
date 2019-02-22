@@ -7,7 +7,7 @@ function testNoteListView() {
   var noteListView = new NoteListView(noteList);
   console.log(noteListView.returnHtmlString())
   assert.isTrue(noteListView.returnHtmlString() ===
-  '<ul><li><div><a href="#6">Goal One: I can TDD </a></div></li><li><div><a href="#7">Goal Two: I can prog</a></div></li></ul>');
+  '<ul><li><div><a href="#notes/6">Goal One: I can TDD </a></div></li><li><div><a href="#notes/7">Goal Two: I can prog</a></div></li></ul>');
   console.log('NoteListView return first 20 characters')
 
   var noteList = new NoteList();

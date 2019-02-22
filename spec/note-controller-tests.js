@@ -6,21 +6,18 @@ function isNoteController(noteList) {
 
   isNoteController(new NoteController(new NoteList()));
 
+function testNoteController() {
 
-// function testNoteController() {
-//
-//   var htmlElement = document.createElement("div");
-//   htmlElement.setAttribute("id","app");
-//   console.log(htmlElement)
-//
-//   var noteList = new NoteList();
-//   var noteController = new NoteController(noteList);
-//   noteController.createNote('Favourite drink: seltzer')
-//   noteController.renderNotes();
-//
-//   var expect = '<ul><li><div>Favourite drink: seltzer</div></li></ul>'
-//   assert.isTrue(document.getElementById("app").innerHTML === expect )
-//   console.log('NoteController can creturn HTML string')
-// };
+  // var htmlElement = document.createElement("div");
+  // htmlElement.setAttribute("id","app");
+  // console.log(htmlElement)
 
-    // testNoteController();
+  var noteList = new NoteList();
+  var noteController = new NoteController(noteList);
+  noteController.createNote('Goal One: I can TDD everything')
+
+  assert.isTrue(noteController.htmlString() === '<ul><li><div><a href="#notes/8">Goal One: I can TDD </a></div></li></ul>')
+  console.log('NoteController can creturn HTML string')
+};
+
+    testNoteController();
