@@ -1,19 +1,22 @@
 function testNoteList() {
-  var note1 = new Note('I can TDD everything');
-  var note2 = new Note('I can programme fluently');
-  var note3 = new Note ('I am having fun');
   var noteList = new NoteList();
-  noteList.storeNote(note1)
-  noteList.storeNote(note2)
-  noteList.storeNote(note3)
-  console.log(noteList.list)
+  noteList.createAndStoreNote('I can TDD everything')
+  noteList.createAndStoreNote('I can programme fluently');
+  // console.log(noteList.notes[0].id);
 
-  assert.isTrue(noteList.list.length === 3);
-  // assert.isTrue(noteList.list ===
-  //   'I can TDD everything',
-  //   'I can programme fluently',
-  //   'I am having fun'
-  // );
+  assert.isTrue(noteList.notes[0].text === 'I can TDD everything');
+  assert.isFalse(noteList.notes[1].text === 'I can TDD everything');
+  console.log('NoteList can create and store notes')
+
+  // console.log(noteList.findNoteById(4));
+  assert.isTrue(noteList.findNoteById(4) === 'I can TDD everything');
+  console.log('NoteList can fetch note by id.')
 };
 
 testNoteList();
+
+// function testNoteListFindNoteById() {
+//
+// };
+//
+// testNoteListFindNoteById()
