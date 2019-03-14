@@ -11,8 +11,7 @@ function testNoteController_ListView() {
   // console.log(htmlElement)
 
   var noteList = new NoteList();
-  var singleNoteView = new SingleNoteView()
-  var noteController = new NoteController(noteList, singleNoteView);
+  var noteController = new NoteController(noteList);
   noteController.createNote('Goal One: I can TDD everything')
   // console.log(noteController.htmlListString())
   assert.isTrue(noteController.htmlListString() === '<ul><li><div><a href="#notes/9">Goal One: I can TDD </a></div></li></ul>')
@@ -24,8 +23,7 @@ testNoteController_ListView();
 
 function testNoteController_SingleView() {
   var noteList = new NoteList();
-  var singleNoteView = new SingleNoteView()
-  var noteController = new NoteController(noteList, singleNoteView);
+  var noteController = new NoteController(noteList);
   noteController.createNote('Goal One: I can TDD everything')
   noteController.createNote('Goal Two: I can programme fluently')
   var htmlListString = noteController.htmlListString()
@@ -34,8 +32,11 @@ function testNoteController_SingleView() {
   console.log(noteController.getNoteIdFromURL());
   assert.isTrue(noteController.getNoteIdFromURL() === 10);
   console.log('NoteController can return note id')
-  // assert.isTrue(noteController.renderSingleNote() === '<div>Goal One: I can TDD everything</div>')
-  // console.log('NoteController can return single note in html string')
+
+  console.log(noteController.htmlSingleString())
+
+  assert.isTrue(noteController.htmlSingleString() === '<div>Goal One: I can TDD everything</div>')
+  console.log('NoteController can return single note in html string')
 };
 
 testNoteController_SingleView();

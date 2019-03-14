@@ -18,13 +18,10 @@
       makeUrlChangeShowAnimalForCurrentPage();
 
       function makeUrlChangeShowAnimalForCurrentPage() {
-        console.log(window.addEventListener("hashchange", showAnimalForCurrentPage))
         window.addEventListener("hashchange", showAnimalForCurrentPage);
-        debugger
       };
 
       function showAnimalForCurrentPage() {
-        console.log(location)
         showAnimal(getAnimalFromUrl(window.location));
       };
 
